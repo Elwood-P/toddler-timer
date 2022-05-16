@@ -1,0 +1,76 @@
+:root {
+  --base-100: #182643;
+  --base-200: #0e172a;
+
+  --content-100: #bfc9dd;
+  --content-200: #586885;
+  --content-200: #394b6d;
+
+  --primary: #3295f8;
+  --accent: #2ed399;
+}
+
+/*
+// Global 
+*/
+body {
+  color: var(--content-100);
+}
+
+/* 
+// Utilities 
+*/
+.hidden {
+  display: none !important;
+}
+
+/* 
+// Components
+*/
+.container {
+  display: grid;
+  place-content: center center;
+  justify-items: center;
+  grid-template-columns: min(100%, 800px);
+  min-height: 100vh;
+  background-color: var(--base-200);
+}
+
+/* Form */
+.form {
+  display: flex;
+}
+
+.form * + * {
+  margin-right: 1rem;
+}
+  
+.field {
+  display: flex;
+  flex-direction: column;
+  max-width: 7.5rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  background-color: var(--base-100);
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--content-200);
+}
+
+.btn--accent {
+  background-color: var(--accent);
+  color: var(--base-100);
+}
+

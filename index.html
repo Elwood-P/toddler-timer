@@ -2,34 +2,38 @@
 <html>
 
 <head>
-  <title>Test</title>
+  <title>Toddler Timer</title>
   <link rel="icon" href="favicon.svg">
-  <script src="/index.js" defer></script>
+  <link rel="stylesheet" href="src/normalize.css">
+  <link rel="stylesheet" href="src/style.css">
+  <script src="src/index.js" defer></script>
 </head>
 
 <body>
-  <main class="clock">
-    <p class="clock__timeleft">10</p>
-    <div class="clock__face"></div>
-  </main>
+  <div class="container">
+    <main class="clock">
+      <p class="clock__timeleft">10</p>
+      <div class="clock__face"></div>
+    </main>
 
-  <div class="controls">
-    <form class="form form__setup">
-      <div class="field">
-        <label for="input--total-time" class="field__label">Total time</label>
-        <input id="input--total-time" class="field__input" type="number">
-      </div>
-      <div class="field">
-        <label for="input--time-left" class="field__label">Time left</label>
-        <input id="input--time-left" class="field__input" type="number">
-      </div>
-      <button type="submit" class="btn">Start</button>
-    </form>
+    <div class="controls">
+      <form class="form form__setup">
+        <div class="field">
+          <label for="input--total-time" class="field__label">Total time</label>
+          <input id="input--total-time" class="field__input" type="number">
+        </div>
+        <div class="field">
+          <label for="input--time-left" class="field__label">Time left</label>
+          <input id="input--time-left" class="field__input" type="number">
+        </div>
+        <button type="submit" class="btn btn--accent">Start</button>
+      </form>
 
-    <form class="form form__running">
-      <button class="btn">Pause</button>
-      <button class="btn">New</button>
-    </form>
+      <form class="form form__running hidden">
+        <button class="btn">Pause</button>
+        <button class="btn">New</button>
+      </form>
+    </div>
   </div>
 </body>
 
