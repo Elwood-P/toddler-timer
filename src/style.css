@@ -77,13 +77,11 @@ body {
 }
 
 .clock__face:before {
-  --pct: 55;
-
   content: "";
   position: absolute;
   border-radius: 50%;
   inset: 0;
-  background: conic-gradient(var(--primary) calc(var(--pct)*1%),#0000 0);
+  background: conic-gradient(#0000 calc(var(--pct)*1%), var(--primary) 0);
 }
 
 /* Form */
@@ -133,11 +131,10 @@ body {
   padding-right: 2rem;
   background-color: var(--gray-600);
   border-radius: 10rem;
-  font-weight: 600;
-  color: #fff;
+  color: var(--gray-50);
 }
 
 .btn--accent {
   background-color: var(--primary);
-  color: var(--base-100);
+  color: var(--gray-50);
 }

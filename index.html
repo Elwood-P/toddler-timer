@@ -15,19 +15,19 @@
 <body>
   <div class="container">
     <main class="clock">
-      <p class="clock__timeleft">10</p>
-      <div class="clock__face"></div>
+      <p class="clock__timeleft">&nbsp;</p>
+      <div class="clock__face" style="--pct: 0"></div>
     </main>
 
     <div class="controls">
       <form class="form form__setup">
         <div class="field">
           <label for="input--total-time" class="field__label">Total time</label>
-          <input id="input--total-time" class="field__input" type="number">
+          <input id="input--total-time" class="field__input" type="number" min="1" >
         </div>
         <div class="field">
           <label for="input--time-left" class="field__label">Time used</label>
-          <input id="input--time-left" class="field__input" type="number">
+          <input id="input--time-left" class="field__input" type="number" min="0" >
         </div>
         <button type="submit" class="btn btn--accent">Start</button>
       </form>
