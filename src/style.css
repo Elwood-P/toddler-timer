@@ -1,20 +1,23 @@
 :root {
-  --base-100: #182643;
-  --base-200: #0e172a;
+  --gray-50: #ffffff;  
+  --gray-100: #f4f5f7;
+  --gray-200: #e5e7ec;
+  --gray-300: #d6dae1;
+  --gray-400: #c7ccd6;
+  --gray-500: #b8bfcc;
+  --gray-600: #a9b1c1;
+  --gray-700: #9aa3b6;
+  --gray-800: #8b96ab;
+  --gray-900: #7c88a0;
 
-  --content-100: #bfc9dd;
-  --content-200: #586885;
-  --content-300: #394b6d;
-
-  --primary: #3295f8;
-  --accent: #2ed399;
+  --primary: #5550ea;
 }
 
 /*
 // Global 
 */
 body {
-  color: var(--content-100);
+  color: var(--gray-900);
 }
 
 /* 
@@ -35,7 +38,7 @@ body {
   grid-template-columns: min(100%, 800px);
   grid-gap: 5rem;
   min-height: 100vh;
-  background-color: var(--base-200);
+  background-color: var(--gray-100);
 }
 
 /* 
@@ -66,7 +69,7 @@ body {
   display: inline-grid;
   place-content: center;
   margin: 5px;
-  background-color: var(--base-100);
+  background-color: var(--gray-200);
   border-radius: 50%;
   font-size: 25px;
   font-weight: bold;
@@ -102,14 +105,15 @@ body {
 .field__label {
   margin-bottom: .25rem;
   font-size: 0.875rem;
-  color: var(--content-300);
+  color: var(--gray-600);
 }
 
 .field__input {
   height: 2.625rem;
   padding: 0.75rem;
-  background-color: var(--base-100);
-  box-shadow: 0px 4px 4px rgba(14, 23, 42, 0.25), inset 0px 1px 0px rgba(57, 75, 109, 0.33);
+  background-color: #fff;
+  border: 1px solid  var(--gray-200); 
+  box-shadow: 0px 2px 3px rgba(210, 214, 220, 0.25);
   border-radius: 6px;
 }
 
@@ -127,13 +131,13 @@ body {
   min-height: 2.625rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  background-color: var(--base-100);
+  background-color: var(--gray-600);
   border-radius: 10rem;
   font-weight: 600;
-  color: var(--content-200);
+  color: #fff;
 }
 
 .btn--accent {
-  background-color: var(--accent);
+  background-color: var(--primary);
   color: var(--base-100);
 }
