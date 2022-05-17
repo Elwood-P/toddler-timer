@@ -68,7 +68,6 @@ body {
   aspect-ratio: 1;
   display: inline-grid;
   place-content: center;
-  margin: 5px;
   background-color: var(--gray-200);
   border-radius: 50%;
   font-size: 25px;

@@ -22,19 +22,19 @@
     <div class="controls">
       <form class="form form__setup">
         <div class="field">
-          <label for="input--total-time" class="field__label">Total time</label>
-          <input id="input--total-time" class="field__input" type="number" min="1" >
+          <label for="input--time-total" class="field__label">Total time</label>
+          <input id="input--time-total" class="field__input" type="number" min="1" >
         </div>
         <div class="field">
-          <label for="input--time-left" class="field__label">Time used</label>
-          <input id="input--time-left" class="field__input" type="number" min="0" >
+          <label for="input--time-used" class="field__label">Time used</label>
+          <input id="input--time-used" class="field__input" type="number" min="0" >
         </div>
-        <button type="submit" class="btn btn--accent">Start</button>
+        <button id="btn--start" type="submit" class="btn btn--accent">Start</button>
       </form>
 
       <form class="form form__running hidden">
-        <button class="btn">Pause</button>
-        <button class="btn">New</button>
+        <button id="btn--pause" class="btn">Pause</button>
+        <button id="btn--cancel" class="btn">Cancel</button>
       </form>
     </div>
   </div>
