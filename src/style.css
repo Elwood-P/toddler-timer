@@ -38,8 +38,13 @@ body {
   grid-template-columns: min(100%, 800px);
   grid-gap: 5rem;
   min-height: 100vh;
-  padding: 3rem;
+  padding: 2rem 3rem;
   background-color: var(--gray-100);
+}
+@media (max-width: 600px) {
+  .container {
+    grid-gap: 3rem;
+  }
 }
 
 /* 
