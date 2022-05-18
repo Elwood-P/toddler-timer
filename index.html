@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <title>Toddler Timer</title>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="icon" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,20 +26,23 @@
     <div class="controls">
       <form class="form form__setup">
         <div class="field">
-          <label for="input--time-total" class="field__label">Total time</label>
+          <label for="input--time-total" class="field__label">Total time (m)</label>
           <input id="input--time-total" class="field__input" type="number" min="1" >
         </div>
         <div class="field">
-          <label for="input--time-used" class="field__label">Time used</label>
+          <label for="input--time-used" class="field__label">Time used (m)</label>
           <input id="input--time-used" class="field__input" type="number" min="0" >
         </div>
-        <button id="btn--start" type="submit" class="btn btn--accent">Start</button>
+        <button id="btn--start" class="btn btn--accent">Start</button>
       </form>
 
       <form class="form form__running hidden">
         <button id="btn--pause" class="btn">Pause</button>
+        <button id="btn--play" class="btn hidden">Play</button>
         <button id="btn--cancel" class="btn">Cancel</button>
       </form>
+
+      <p class="controls__timeleft"></p>
     </div>
   </div>
 </body>

@@ -83,6 +83,17 @@ body {
   background: conic-gradient(#0000 calc(var(--pct)*1%), var(--primary) 0);
 }
 
+/* Controls */
+.controls {
+  display: grid;
+  grid-gap: 2rem;
+}
+
+.controls__timeleft {
+  text-align: center;
+  color: var(--gray-500);
+}
+
 /* Form */
 .form {
   display: flex;
@@ -128,7 +139,7 @@ body {
   min-height: 2.625rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  background-color: var(--gray-600);
+  background-color: var(--gray-400);
   border-radius: 10rem;
   color: var(--gray-50);
 }
