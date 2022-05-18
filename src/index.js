@@ -18,6 +18,8 @@ const btnStart = document.getElementById('btn--start');
 const btnPause = document.getElementById('btn--pause');
 const btnPlay = document.getElementById('btn--play');
 const btnCancel = document.getElementById('btn--cancel');
+// Audio
+const alarm = document.querySelector('.alarm');
 
 //Event Listeners
 inputTimeTotal.addEventListener('input', updateTimerData);
@@ -75,18 +77,28 @@ function btnPlayHandler(e) {
 
 function btnCancelHandler(e) {
   e.preventDefault();
-  if (window.confirm("Do you really want to cancel the current timer?")) {
+  if (window.confirm('Do you really want to cancel the current timer?')) {
     location.reload();
   }
 }
 
 function startTimer() {
-  timer = setInterval(timerCountdown, 1000);
+  timer = setInterval(timerCountdown, 100);
   function timerCountdown() {
     timerData.timeUsed++;
-    console.log(timerData.timeUsed);
     updateClock();
+    if (timerData.timeUsed >= timerData.timeTotal) {
+      startAlarm();
+      clearInterval(timer);
+    }
   }
+}
+
+function startAlarm() {
+  alarm.play();
+  alarmPlay = setInterval(() => {
+    alarm.play();
+  }, 10000);
 }
 
 init();
