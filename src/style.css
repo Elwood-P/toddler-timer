@@ -76,7 +76,7 @@ body {
 .clock__face {
   position: relative;
   width: 100%;
-  aspect-ratio: 1;
+  padding-top: 100%;
   display: inline-grid;
   place-content: center;
   background-color: var(--gray-200);
