@@ -83,7 +83,7 @@ function btnCancelHandler(e) {
 }
 
 function startTimer() {
-  timer = setInterval(timerCountdown, 100);
+  timer = setInterval(timerCountdown, 1000);
   function timerCountdown() {
     timerData.timeUsed++;
     updateClock();
