@@ -17,7 +17,7 @@ const inputTimeUsed = document.getElementById('input--time-used');
 const btnStart = document.getElementById('btn--start');
 const btnPause = document.getElementById('btn--pause');
 const btnPlay = document.getElementById('btn--play');
-const btnCancel = document.getElementById('btn--cancel');
+const btnStop = document.getElementById('btn--stop');
 // Audio
 const alarm = document.querySelector('.alarm');
 
@@ -27,7 +27,7 @@ inputTimeUsed.addEventListener('input', updateTimerData);
 btnStart.addEventListener('click', (e) => btnStartHandler(e));
 btnPause.addEventListener('click', (e) => btnPauseHandler(e));
 btnPlay.addEventListener('click', (e) => btnPlayHandler(e));
-btnCancel.addEventListener('click', (e) => btnCancelHandler(e));
+btnStop.addEventListener('click', (e) => btnStopHandler(e));
 
 function init() {
   inputTimeTotal.value = timerData.timeTotal / 60;
@@ -75,7 +75,9 @@ function btnPlayHandler(e) {
   btnPause.classList.toggle('hidden');
 }
 
-function btnCancelHandler(e) {
+function btnStopHandler(e) {
+  if (timerData.timeUsed >= timerData.timeTotal) return; // If timer has finished no need for prompt - nb reload default behaviour
+
   e.preventDefault();
   if (window.confirm('Do you really want to cancel the current timer?')) {
     location.reload();
@@ -89,6 +91,7 @@ function startTimer() {
     updateClock();
     if (timerData.timeUsed >= timerData.timeTotal) {
       startAlarm();
+      btnStop.classList.add('btn--accent');
       clearInterval(timer);
     }
   }
