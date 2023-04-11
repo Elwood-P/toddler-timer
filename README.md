@@ -18,7 +18,7 @@
 -  HTML
 -  CSS
 
-# Todo
+## Todo
 - [ ] Improve accuracy by using timestamps and `requestAnimationFrame` method for a JavaScript timer
 - [ ] Prevent display sleep by integrating [NoSleep Library](https://github.com/richtr/NoSleep.js/)
 - [ ] Improve UX by updating button colours based on their current state
