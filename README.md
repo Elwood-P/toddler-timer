@@ -1,9 +1,9 @@
 # Toddler Timer
 
-> A timer inspired by my toddler, who is too young to tell the time. I wanted a timer that would display a visual percentage used of the total time, rather than a traditional base-60 clock. This timer features large numbers that count down, helping my child to develop an understanding of what various durations feel like in minutes.
->
-> One of several projects undertaken to refresh my knowledge of vanilla JavaScript.
->
+> A timer inspired by my toddler, who is too young to tell the time. I wanted a timer that would display a visual percentage used of the total time, rather than a traditional base-60 clock. This timer features large numbers that count down, helping my child to develop an understanding of what various durations feel like in minutes.  
+>  
+> One of several projects undertaken to refresh my knowledge of vanilla JavaScript.  
+>  
 > [View project live](https://jsv-fetch-array.netlify.app/)
 
 ## Key Features
